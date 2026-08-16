@@ -1,0 +1,23 @@
+# Editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.swp
+
+# Node.js - future projects
+node_modules/
+npm-debug.log*
+
+# Build files
+dist/
+build/
