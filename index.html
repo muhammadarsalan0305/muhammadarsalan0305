@@ -1955,6 +1955,88 @@ footer {
     color: #38bdf8;
     transform: translateY(-2px);
 }
+
+/* ===== PROJECT MODAL ===== */
+
+.project-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.project-modal.show {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    background: #1e293b;
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: modalOpen 0.3s ease;
+}
+
+.modal-content h2 {
+    color: #38bdf8;
+    margin: 15px 0;
+}
+
+.modal-content p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: #0f172a;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #38bdf8;
+}
+
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .modal-content {
+        padding: 28px 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 22px;
+    }
+}
     
     </style>
 
@@ -2201,13 +2283,10 @@ footer {
         <span>JavaScript</span>
     </div>
 
-    <a href="https://muhammadarsalan0305.github.io/muhammadarsalan0305/"
-       class="project-btn"
-       target="_blank"
-       rel="noopener noreferrer">
-       View Project →
-    </a>
-
+<button class="project-btn" onclick="openModal('portfolioModal')">
+    View Details →
+</button>
+           
 </div>
 <div class="project-card">
 
@@ -2337,6 +2416,43 @@ footer {
     </div>
 
 </section>
+
+    <div class="project-modal" id="portfolioModal">
+
+    <div class="modal-content">
+
+        <button class="modal-close"
+                onclick="closeModal('portfolioModal')">
+            ×
+        </button>
+
+        <span class="project-status">LIVE PROJECT</span>
+
+        <h2>🌐 Personal Portfolio</h2>
+
+        <p>
+            This is my personal portfolio website where I
+            showcase my education, skills, projects and
+            Computer Science journey.
+        </p>
+
+        <div class="project-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>GitHub Pages</span>
+        </div>
+
+        <a href="https://muhammadarsalan0305.github.io/muhammadarsalan0305/"
+           class="project-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+            Open Live Project →
+        </a>
+
+    </div>
+
+</div>
     <footer>
 
     <div class="footer-content">
@@ -2527,6 +2643,51 @@ window.addEventListener("scroll", function () {
 });
 </script>
     
+<script>
+
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+
+    if (modal) {
+        modal.classList.add("show");
+        document.body.style.overflow = "hidden";
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+
+    if (modal) {
+        modal.classList.remove("show");
+        document.body.style.overflow = "";
+    }
+}
+    window.addEventListener("click", function (event) {
+
+    if (event.target.classList.contains("project-modal")) {
+
+        event.target.classList.remove("show");
+        document.body.style.overflow = "";
+
+    }
+
+});
+    document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+
+        const modal = document.querySelector(".project-modal.show");
+
+        if (modal) {
+            modal.classList.remove("show");
+            document.body.style.overflow = "";
+        }
+
+    }
+
+});
+
+    </script>
 </body>
 
     
