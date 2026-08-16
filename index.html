@@ -74,6 +74,64 @@
 .profile-photo:hover {
     transform: scale(1.05);
 }
+    .section-label {
+    text-align: center;
+    color: #38bdf8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.about-card {
+    max-width: 850px;
+    margin: 25px auto 0;
+    background: #1e293b;
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-content h3 {
+    color: #38bdf8;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    color: #cbd5e1;
+    margin-bottom: 15px;
+}
+
+.about-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.about-info div {
+    background: #0f172a;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.about-info strong,
+.about-info span {
+    display: block;
+}
+
+.about-info strong {
+    color: #38bdf8;
+    margin-bottom: 7px;
+}
+
+.about-info span {
+    color: #cbd5e1;
+    font-size: 14px;
+}
     <style>
         * {
             margin: 0;
@@ -464,17 +522,49 @@ section {
 </section>
 
 
-    <section class="section" id="about">
-        <h2>About Me</h2>
+<section class="section" id="about">
 
-        <div class="card">
+    <p class="section-label">GET TO KNOW ME</p>
+
+    <h2>About Me</h2>
+
+    <div class="about-card">
+
+        <div class="about-content">
+            <h3>I'm M. Arsalan</h3>
+
             <p>
-                My name is M. Arsalan. I am a student interested
-                in Computer Science, programming and technology.
-                I am learning how to build modern websites.
+                I am a Computer Science student with a strong interest
+                in technology, programming and web development.
             </p>
+
+            <p>
+                I am currently building my skills in HTML, CSS, C++,
+                Python and modern web technologies. My goal is to
+                become a skilled software and web developer.
+            </p>
+
+            <div class="about-info">
+                <div>
+                    <strong>🎓 Education</strong>
+                    <span>Computer Science</span>
+                </div>
+
+                <div>
+                    <strong>💻 Focus</strong>
+                    <span>Web Development</span>
+                </div>
+
+                <div>
+                    <strong>🚀 Goal</strong>
+                    <span>Software Developer</span>
+                </div>
+            </div>
         </div>
-    </section>
+
+    </div>
+
+</section>
 
 
     <section class="section" id="education">
