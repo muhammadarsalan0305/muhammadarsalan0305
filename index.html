@@ -2312,12 +2312,12 @@ footer {
         <span>Problem Solving</span>
     </div>
 
-    <a href="#"
-       class="project-btn">
-       In Progress →
-    </a>
-
+<button class="project-btn" onclick="openModal('cppModal')">
+    View Details →
+</button>
+    
 </div>
+        
         
             </p>
             
@@ -2342,13 +2342,17 @@ footer {
         <span>Future Project</span>
     </div>
 
-    <a href="#"
-       class="project-btn">
-       Coming Soon →
-    </a>
-
+    <button class="project-btn" onclick="openModal('pythonModal')">
+    View Details →
+</button>
+         
 </div>
+        
+
+        
+        
     </p>
+        
 
             <a href="#" class="project-btn">
                 Coming Soon
@@ -2359,6 +2363,76 @@ footer {
 
 </section> 
 
+<!-- C++ PROJECT MODAL -->
+
+<div class="project-modal" id="cppModal">
+
+    <div class="modal-content">
+
+        <button class="modal-close"
+                onclick="closeModal('cppModal')">
+            ×
+        </button>
+
+        <span class="project-status">LEARNING PROJECT</span>
+
+        <h2>💻 C++ Learning Project</h2>
+
+        <p>
+            This project represents my journey of learning
+            C++ programming, including programming fundamentals,
+            logic building and problem solving.
+        </p>
+
+        <div class="project-tech">
+            <span>C++</span>
+            <span>Programming</span>
+            <span>Problem Solving</span>
+        </div>
+
+        <button class="project-btn" disabled>
+            In Progress
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- PYTHON PROJECT MODAL -->
+
+<div class="project-modal" id="pythonModal">
+
+    <div class="modal-content">
+
+        <button class="modal-close"
+                onclick="closeModal('pythonModal')">
+            ×
+        </button>
+
+        <span class="project-status">COMING SOON</span>
+
+        <h2>🐍 Python Project</h2>
+
+        <p>
+            This is a future project that I will develop
+            while learning Python and building practical
+            programming skills.
+        </p>
+
+        <div class="project-tech">
+            <span>Python</span>
+            <span>Programming</span>
+            <span>Future Project</span>
+        </div>
+
+        <button class="project-btn" disabled>
+            Coming Soon
+        </button>
+
+    </div>
+
+</div>
     
     <section class="section" id="contact">
     <h2>Contact Me</h2>
