@@ -1598,17 +1598,62 @@ body.light-mode .stat-card p {
     }
 }
     
+
+/* ===== HAMBURGER ANIMATION ===== */
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    border: 1px solid #38bdf8;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #38bdf8;
+    margin: 5px auto;
+    transition: 0.3s ease;
+}
+
+.menu-btn.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 600px) {
+    .menu-btn {
+        display: block;
+    }
+}
     
     </style>
 
+    
 <body>
 
    <header>
     <div class="nav-container">
 
         <h1>Arsalan</h1>
-<button class="menu-btn" id="menuBtn">☰</button>
-        
+
+        <button class="menu-btn" id="menuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -2069,10 +2114,13 @@ revealElements.forEach(function(element) {
 </script>
 <script>
 const menuBtn = document.getElementById("menuBtn");
-const mainNav = document.getElementById("mainNav");
 
+mainNav.classList.toggle("active");
+menuBtn.classList.toggle("active");
+    
 menuBtn.addEventListener("click", function () {
     mainNav.classList.toggle("active");
+    menuBtn.classList.remove("active");
 });
 
 const navLinks = mainNav.querySelectorAll("a");
