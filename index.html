@@ -993,6 +993,77 @@ header {
         font-size: 14px;
     }
 }
+    /* ===== PREMIUM SKILLS ===== */
+
+#skills > h2 {
+    font-size: 38px;
+    margin-bottom: 35px;
+}
+
+.skills-box {
+    max-width: 850px;
+    background: linear-gradient(
+        145deg,
+        #1e293b,
+        #172033
+    );
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    padding: 35px;
+}
+
+.skill {
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    background: rgba(15, 23, 42, 0.55);
+    border: 1px solid rgba(56, 189, 248, 0.08);
+    transition: 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateX(6px);
+    border-color: rgba(56, 189, 248, 0.35);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.08);
+}
+
+.skill-name {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.skill-name span:first-child {
+    color: #f8fafc;
+}
+
+.skill-name span:last-child {
+    color: #38bdf8;
+}
+
+.skill-bar {
+    height: 11px;
+    background: #0f172a;
+    border: 1px solid rgba(56, 189, 248, 0.08);
+}
+
+.skill-progress {
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+@media (max-width: 600px) {
+
+    #skills > h2 {
+        font-size: 30px;
+    }
+
+    .skills-box {
+        padding: 20px;
+    }
+
+    .skill {
+        padding: 15px;
+    }
+}
     </style>
 
 <body>
