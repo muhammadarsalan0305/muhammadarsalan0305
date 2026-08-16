@@ -1741,7 +1741,60 @@ body.light-mode .stat-card p {
     color: #38bdf8;
     font-weight: bold;
 }
-    
+
+    /* MOBILE MENU FIX */
+
+.nav-container {
+    position: relative;
+}
+
+.menu-btn {
+    display: none;
+    position: relative;
+    z-index: 9999;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    border: 1px solid #38bdf8;
+    border-radius: 10px;
+    background: #1e293b;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 5px auto;
+    background: #38bdf8;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    #mainNav {
+        display: none;
+        position: absolute;
+        z-index: 9998;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 15px;
+        background: #1e293b;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    #mainNav.active {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
     </style>
 
     
