@@ -615,6 +615,53 @@ section {
     background: #38bdf8;
     color: #0f172a;
 }
+    /* ===== PREMIUM PROJECTS ===== */
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, #1e293b, #172033);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: #38bdf8;
+    transition: 0.5s ease;
+}
+
+.project-card:hover::before {
+    left: 0;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(56, 189, 248, 0.5);
+    box-shadow: 0 15px 35px rgba(56, 189, 248, 0.12);
+}
+
+.project-card h3 {
+    font-size: 22px;
+}
+
+.project-card p {
+    line-height: 1.7;
+}
+
+.project-btn {
+    transition: 0.3s ease;
+}
+
+.project-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
+}
     </style>
 
 <body>
@@ -804,7 +851,50 @@ section {
 </section>
 <section class="section" id="projects">
     <h2>My Projects</h2>
+<div class="projects-container">
 
+    <div class="project-card">
+        <h3>🌐 Personal Portfolio</h3>
+        <p>
+            A modern responsive personal portfolio website
+            built with HTML and CSS.
+        </p>
+
+        <a href="https://muhammadarsalan0305.github.io/muhammadarsalan0305/"
+           class="project-btn"
+           target="_blank">
+           View Project
+        </a>
+    </div>
+
+    <div class="project-card">
+        <h3>💻 C++ Learning Project</h3>
+        <p>
+            My programming practice project where I am
+            learning C++ and developing my coding skills.
+        </p>
+
+        <a href="#"
+           class="project-btn">
+           View Project
+        </a>
+    </div>
+
+    <div class="project-card">
+        <h3>🐍 Python Project</h3>
+        <p>
+            A future Python project that I will build
+            while learning programming.
+        </p>
+
+        <a href="#"
+           class="project-btn">
+           Coming Soon
+        </a>
+    </div>
+
+</div>
+    </section>
     <div class="projects-container">
 
         <div class="project-card">
