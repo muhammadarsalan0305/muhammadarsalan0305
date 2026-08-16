@@ -1329,6 +1329,40 @@ footer {
         padding-right: 15px;
     }
 }
+    /* ===== SCROLL TO TOP ===== */
+
+#scrollTopBtn {
+    position: fixed;
+    right: 20px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #38bdf8;
+    color: #0f172a;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.3);
+    transition: 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.45);
+}
+
+@media (max-width: 600px) {
+    #scrollTopBtn {
+        right: 15px;
+        bottom: 18px;
+        width: 42px;
+        height: 42px;
+    }
+}
     </style>
 
 <body>
@@ -1633,5 +1667,26 @@ footer {
         class="top-btn">
     ↑
 </button>
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+    <script>
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+        scrollTopBtn.style.display = "block";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+});
+
+scrollTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
 </body>
+    
+    
 </html>
