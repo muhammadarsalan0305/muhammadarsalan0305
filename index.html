@@ -1421,6 +1421,18 @@ body.light-mode .contact-card p {
 body.light-mode .nav-container nav a {
     color: #0f172a;
 }
+    /* ===== SCROLL REVEAL ===== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
     </style>
 
 <body>
@@ -1802,7 +1814,30 @@ themeToggle.addEventListener("click", function () {
 
 });
 </script>
-    
+    <script>
+const revealElements = document.querySelectorAll(
+    ".about-card, .timeline-item, .skill, .project-card, .contact-card"
+);
+
+const revealObserver = new IntersectionObserver(
+    function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("reveal", "show");
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+revealElements.forEach(function(element) {
+    element.classList.add("reveal");
+    revealObserver.observe(element);
+});
+</script>
 </body>
     
     
