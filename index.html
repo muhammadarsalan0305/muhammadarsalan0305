@@ -1973,18 +1973,22 @@ footer {
 .project-modal.show {
     display: flex;
 }
-
 .modal-content {
     position: relative;
     width: 100%;
     max-width: 600px;
+    max-height: 85vh;
+    overflow-y: auto;
+
     background: #1e293b;
     padding: 35px;
     border-radius: 20px;
     border: 1px solid rgba(56, 189, 248, 0.3);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+
     animation: modalOpen 0.3s ease;
 }
+
 
 .modal-content h2 {
     color: #38bdf8;
