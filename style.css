@@ -2023,6 +2023,44 @@ footer {
     }
 
 }
+
+/* ===== MOBILE HEADER ===== */
+
+@media (max-width: 600px) {
+
+    header {
+        height: 75px;
+    }
+
+    .nav-container {
+        height: 75px;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 50px 1fr 50px;
+        align-items: center;
+    }
+
+    .nav-container h1 {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: center;
+        margin: 0;
+        font-size: 28px;
+    }
+
+    .menu-btn {
+        grid-column: 1;
+        grid-row: 1;
+        width: 50px;
+        height: 50px;
+        margin: 0;
+        justify-self: start;
+    }
+
+}
+
+
+
     
     </style>
 
