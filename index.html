@@ -1544,6 +1544,18 @@ body.light-mode .stat-card p {
 /* ===== MOBILE MENU BUTTON ===== */
 
 .menu-btn {
+    .menu-btn {
+    display: none;
+    position: relative;
+    z-index: 1001;
+    background: transparent;
+    border: 1px solid #38bdf8;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 8px;
+}
     display: none;
     background: transparent;
     border: 1px solid #38bdf8;
@@ -1558,7 +1570,22 @@ body.light-mode .stat-card p {
 /* Mobile */
 
 @media (max-width: 600px) {
+@media (max-width: 600px) {
 
+    .menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #38bdf8;
+    margin: 5px auto;
+    pointer-events: none;
+}
+    .menu-btn {
+        display: block;
+        position: relative;
+        z-index: 1001;
+    }
+}
     .nav-container {
         display: flex;
         align-items: center;
