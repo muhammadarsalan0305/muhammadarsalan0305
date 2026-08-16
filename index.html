@@ -1879,6 +1879,46 @@ footer {
         font-size: 14px;
     }
 }
+    /* ===== PROFESSIONAL PROJECT CARD ===== */
+
+.project-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.project-status {
+    font-size: 11px;
+    font-weight: bold;
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    padding: 5px 10px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.project-tech span {
+    background: #0f172a;
+    color: #94a3b8;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.project-btn {
+    transition: 0.3s ease;
+}
+
+.project-btn:hover {
+    transform: translateX(5px);
+}
     </style>
 
     
@@ -2104,26 +2144,34 @@ footer {
 
     <div class="projects-container">
 
-        <div class="project-card">
-            <h3>🌐 Personal Portfolio</h3>
-            <p>
-                A modern responsive personal portfolio website
-                built with HTML and CSS.
-                <div class="project-tags">
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-</div>
-            </p>
+       <div class="project-card">
 
-<a href="https://muhammadarsalan0305.github.io/muhammadarsalan0305/"
-   class="project-btn"
-   target="_blank"
-   rel="noopener noreferrer">
-   View Project
-</a>
-            
-        </div>
+    <div class="project-top">
+        <span class="project-status">LIVE</span>
+    </div>
+
+    <h3>🌐 Personal Portfolio</h3>
+
+    <p>
+        A modern responsive personal portfolio website
+        built to showcase my education, skills, projects
+        and journey in Computer Science.
+    </p>
+
+    <div class="project-tech">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+    </div>
+
+    <a href="https://muhammadarsalan0305.github.io/muhammadarsalan0305/"
+       class="project-btn"
+       target="_blank"
+       rel="noopener noreferrer">
+       View Project →
+    </a>
+
+</div>
 
         <div class="project-card">
             <h3>💻 C++ Learning Project</h3>
