@@ -744,6 +744,70 @@ header {
         font-size: 12px;
     }
 }
+    /* ===== PROFESSIONAL HERO ===== */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-photo {
+    box-shadow:
+        0 0 0 6px rgba(56, 189, 248, 0.08),
+        0 0 35px rgba(56, 189, 248, 0.35);
+}
+
+.welcome {
+    animation: heroFade 0.8s ease;
+}
+
+.hero h2 {
+    animation: heroFade 1s ease;
+}
+
+.hero h3 {
+    animation: heroFade 1.2s ease;
+}
+
+.hero-text {
+    animation: heroFade 1.4s ease;
+}
+
+.hero-buttons {
+    animation: heroFade 1.6s ease;
+}
+
+.hero-status {
+    margin-top: 25px;
+    color: #94a3b8;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.7);
+}
+
+@keyframes heroFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
     </style>
 
 <body>
@@ -765,8 +829,7 @@ header {
     </div>
 </header>
 
-
-    <section class="hero" id="home">
+<section class="hero" id="home">
 
     <div class="profile">
         <img src="profile.jpg" class="profile-photo" alt="Arsalan">
@@ -776,11 +839,12 @@ header {
 
     <h2>Hello, I'm <span>M. Arsalan</span></h2>
 
-    <h3>Computer Science Student & Future Web Developer</h3>
+    <h3>Computer Science Student &amp; Future Web Developer</h3>
 
     <p class="hero-text">
-        I am learning Computer Science, Programming and Web Development.
-        I love technology and I am working to build useful and creative websites.
+        I am a Computer Science student passionate about programming,
+        web development and technology. I am continuously learning
+        and building creative digital projects.
     </p>
 
     <div class="hero-buttons">
@@ -788,8 +852,12 @@ header {
         <a href="#contact" class="hero-btn outline">Contact Me</a>
     </div>
 
-</section>
+    <div class="hero-status">
+        <span class="status-dot"></span>
+        Currently Learning &amp; Building
+    </div>
 
+</section>
 
 <section class="section" id="about">
 
