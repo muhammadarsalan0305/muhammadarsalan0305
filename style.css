@@ -2024,41 +2024,51 @@ footer {
 
 }
 
-/* ===== MOBILE HEADER ===== */
+/* ===== COMPACT MOBILE HEADER ===== */
 
 @media (max-width: 600px) {
 
     header {
-        height: 75px;
+        height: 80px !important;
+        min-height: 80px !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     .nav-container {
-        height: 75px;
-        padding: 0 20px;
-        display: grid;
-        grid-template-columns: 50px 1fr 50px;
-        align-items: center;
+        height: 80px !important;
+        min-height: 80px !important;
+        padding: 0 15px !important;
+        margin: 0 !important;
+
+        display: grid !important;
+        grid-template-columns: 50px 1fr 50px !important;
+        align-items: center !important;
     }
 
     .nav-container h1 {
         grid-column: 2;
         grid-row: 1;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
         text-align: center;
-        margin: 0;
-        font-size: 28px;
+        font-size: 27px;
     }
 
     .menu-btn {
         grid-column: 1;
         grid-row: 1;
-        width: 50px;
-        height: 50px;
-        margin: 0;
+
+        width: 48px !important;
+        height: 48px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
         justify-self: start;
     }
-
 }
-
 
 
     
