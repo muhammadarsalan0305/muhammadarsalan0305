@@ -723,9 +723,13 @@ header {
     display: flex;
     gap: 22px;
 }
-
-.nav-container nav a {
+.nav-container {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
     color: #e2e8f0;
     text-decoration: none;
     font-size: 15px;
@@ -755,23 +759,33 @@ header {
 @media (max-width: 600px) {
 
     .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-btn {
+        display: block;
+        margin-left: auto;
+    }
+
+    #mainNav {
+        display: none;
+        position: absolute;
+        z-index: 9998;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 15px;
+        background: #1e293b;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    #mainNav.active {
+        display: flex;
         flex-direction: column;
-        gap: 12px;
-        padding: 15px 10px;
-    }
-
-    .nav-container h1 {
-        font-size: 24px;
-    }
-
-    .nav-container nav {
         gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-container nav a {
-        font-size: 12px;
     }
 }
     /* ===== PROFESSIONAL HERO ===== */
