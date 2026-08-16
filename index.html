@@ -1363,6 +1363,10 @@ footer {
         height: 42px;
     }
 }
+    #typing-text {
+    color: #e2e8f0;
+    min-height: 32px;
+}
     </style>
 
 <body>
@@ -1394,7 +1398,7 @@ footer {
 
     <h2>Hello, I'm <span>M. Arsalan</span></h2>
 
-    <h3>Computer Science Student &amp; Future Web Developer</h3>
+    <h3 id="typing-text"></h3>
 
     <p class="hero-text">
         I am a Computer Science student passionate about programming,
@@ -1685,6 +1689,47 @@ scrollTopBtn.addEventListener("click", function () {
         behavior: "smooth"
     });
 });
+</script>
+    <script>
+const typingText = document.getElementById("typing-text");
+
+const texts = [
+    "Computer Science Student",
+    "Future Web Developer",
+    "Programming Learner",
+    "Technology Enthusiast"
+];
+
+let textIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeEffect() {
+    const currentText = texts[textIndex];
+
+    if (!deleting) {
+        typingText.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === currentText.length) {
+            deleting = true;
+            setTimeout(typeEffect, 1500);
+            return;
+        }
+    } else {
+        typingText.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+            deleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+        }
+    }
+
+    setTimeout(typeEffect, deleting ? 50 : 90);
+}
+
+typeEffect();
 </script>
 </body>
     
