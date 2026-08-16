@@ -132,6 +132,60 @@
     color: #cbd5e1;
     font-size: 14px;
 }
+    .timeline {
+    max-width: 750px;
+    margin: 35px auto 0;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #38bdf8;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 55px;
+    margin-bottom: 30px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background: #38bdf8;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+
+.timeline-content {
+    background: #1e293b;
+    padding: 22px;
+    border-radius: 15px;
+    border-left: 3px solid #38bdf8;
+}
+
+.timeline-content span {
+    color: #38bdf8;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.timeline-content h3 {
+    color: white;
+    margin: 7px 0;
+}
+
+.timeline-content p {
+    color: #cbd5e1;
+}
     <style>
         * {
             margin: 0;
@@ -148,7 +202,7 @@
 
         header {
             background: #1e293b;
-            padding: 20px;
+            pa padding: 20px;
             text-align: center;
         }
 
@@ -336,7 +390,13 @@
     .about-card {
     padding: 25px 18px;
 }
+.timeline-item {
+    padding-left: 45px;
+}
 
+.timeline-content {
+    padding: 18px;
+}
 .about-info {
     grid-template-columns: 1fr;
 }
@@ -574,26 +634,53 @@ section {
 </section>
 
 
-    <section class="section" id="education">
-        <h2>Education</h2>
-<div class="education-card">
-    <h3>Intermediate</h3>
-    <p><strong>College:</strong> Khyber Model College, Mardan</p>
-    <p><strong>Program:</strong> Pre-Medical</p>
-</div>
+<section class="section" id="education">
 
-<div class="education-card">
-    <h3>Matriculation</h3>
-    <p><strong>School:</strong> Govt Higher Secondary School Katakhat, Mardan</p>
-</div>
+    <p class="section-label">MY JOURNEY</p>
+    <h2>Education</h2>
 
-<div class="education-card">
-    <h3>Computer Science</h3>
-    <p>Currently learning Computer Science, Programming and Web Development.</p>
-</div>
-      </p>
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+                <span>Matriculation</span>
+                <h3>Matriculation</h3>
+                <p>
+                    Govt Higher Secondary School Katakhat, Mardan
+                </p>
+            </div>
         </div>
-    </section>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+                <span>Intermediate</span>
+                <h3>Pre-Medical</h3>
+                <p>
+                    Khyber Model College, Mardan
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+                <span>Current</span>
+                <h3>Computer Science</h3>
+                <p>
+                    Currently developing my skills in programming,
+                    web development and computer science.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
 
 
     
