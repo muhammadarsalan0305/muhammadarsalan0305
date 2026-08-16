@@ -1367,6 +1367,60 @@ footer {
     color: #e2e8f0;
     min-height: 32px;
 }
+    /* ===== THEME TOGGLE ===== */
+
+.theme-btn {
+    border: 1px solid #38bdf8;
+    background: transparent;
+    color: #38bdf8;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    transform: rotate(15deg);
+}
+
+/* Light Mode */
+
+body.light-mode {
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+body.light-mode header,
+body.light-mode footer {
+    background: #e2e8f0;
+}
+
+body.light-mode .about-card,
+body.light-mode .timeline-content,
+body.light-mode .skills-box,
+body.light-mode .skill,
+body.light-mode .project-card,
+body.light-mode .contact-card {
+    background: #ffffff;
+    color: #0f172a;
+}
+
+body.light-mode p,
+body.light-mode .hero-text,
+body.light-mode .about-content p,
+body.light-mode .timeline-content p,
+body.light-mode .project-card p,
+body.light-mode .contact-card p {
+    color: #475569;
+}
+
+body.light-mode .nav-container nav a {
+    color: #0f172a;
+}
     </style>
 
 <body>
@@ -1383,6 +1437,8 @@ footer {
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
+            <button id="themeToggle" class="theme-btn">☀️</button>
+            
         </nav>
 
     </div>
@@ -1731,7 +1787,24 @@ function typeEffect() {
 
 typeEffect();
 </script>
+<script>
+const themeToggle = document.getElementById("themeToggle");
+
+themeToggle.addEventListener("click", function () {
+
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+        themeToggle.textContent = "🌙";
+    } else {
+        themeToggle.textContent = "☀️";
+    }
+
+});
+</script>
+    
 </body>
+    
     
     
 </html>
