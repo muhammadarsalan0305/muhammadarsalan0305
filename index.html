@@ -186,6 +186,70 @@
 .timeline-content p {
     color: #cbd5e1;
 }
+    .skills-box {
+    max-width: 750px;
+    margin: 35px auto 0;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill:last-child {
+    margin-bottom: 0;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    color: #e2e8f0;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.skill-name span:last-child {
+    color: #38bdf8;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background: #0f172a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: #38bdf8;
+    border-radius: 10px;
+    animation: skillFill 1.5s ease;
+}
+
+.skill-progress.html {
+    width: 85%;
+}
+
+.skill-progress.css {
+    width: 75%;
+}
+
+.skill-progress.cpp {
+    width: 55%;
+}
+
+.skill-progress.python {
+    width: 45%;
+}
+
+@keyframes skillFill {
+    from {
+        width: 0;
+    }
+}
     <style>
         * {
             margin: 0;
@@ -683,33 +747,55 @@ section {
 </section>
 
 
-    
-<section class="section" id="skills">
+    <section class="section" id="skills">
+
+    <p class="section-label">MY EXPERTISE</p>
     <h2>My Skills</h2>
 
-    <div class="skills-container">
+    <div class="skills-box">
 
-        <div class="skill-card">
-            <h3>HTML</h3>
-            <p>Website structure and basic web development.</p>
+        <div class="skill">
+            <div class="skill-name">
+                <span>HTML</span>
+                <span>85%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress html"></div>
+            </div>
         </div>
 
-        <div class="skill-card">
-            <h3>CSS</h3>
-            <p>Website design, layout and responsive styling.</p>
+        <div class="skill">
+            <div class="skill-name">
+                <span>CSS</span>
+                <span>75%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress css"></div>
+            </div>
         </div>
 
-        <div class="skill-card">
-            <h3>C++</h3>
-            <p>Currently learning programming fundamentals.</p>
+        <div class="skill">
+            <div class="skill-name">
+                <span>C++</span>
+                <span>55%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress cpp"></div>
+            </div>
         </div>
 
-        <div class="skill-card">
-            <h3>Python</h3>
-            <p>Currently learning Python programming.</p>
+        <div class="skill">
+            <div class="skill-name">
+                <span>Python</span>
+                <span>45%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress python"></div>
+            </div>
         </div>
 
     </div>
+
 </section>
 <section class="section" id="projects">
     <h2>My Projects</h2>
